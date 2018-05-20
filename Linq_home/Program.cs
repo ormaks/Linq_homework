@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ConsoleApplication1
+namespace Linq_home
 {
     internal static class Program
     {
