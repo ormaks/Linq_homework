@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 
 namespace Linq_home
 {
@@ -91,7 +90,7 @@ namespace Linq_home
             for (var n = 0; n < stringArr.Length; n++)
                 arr[n] = stringArr[n];
 
-            var items = arr.OrderBy(item => item.Length).ThenBy(item => item);
+            var items = arr.OrderBy(item => item.Length).ThenByDescending(item => item);
             Console.Write("\nTask 4:");
             _output += "\nTask 4:";
             foreach (var item in items)
@@ -174,7 +173,7 @@ namespace Linq_home
 //            string[] arrB = {"aaaa", "ab", "aa", "zxc", "bsdsd", "s", "aadsd"};
 
             var items = arrA.Where(word => word.Length == l1).Concat(arrB.Where(word => word.Length == l2))
-                .OrderBy(num => num)
+                .OrderByDescending(word => word)
                 .DefaultIfEmpty();
             Console.Write("\nTask 7:");
             _output += "\nTask 7:";
